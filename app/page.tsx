@@ -1,5 +1,5 @@
-import { Container, Header, Title, TopBar, Filters } from "@/components/shared";
-import { ProductsGroupList } from "@/components/shared/products-group-list";
+import { Container, Header, Title, TopBar, Filters } from "@/shared/components/shared";
+import { ProductsGroupList } from "@/shared/components/shared/products-group-list";
 
 
 export default function Home() {
