@@ -12,11 +12,13 @@ interface Props {
   items: Item[]
   defaultItems?: Item[]
   limit?: number
-  loading?: boolean;
+  loading?: boolean
   searchInputPlaceholder?: string
-  className?: string
-  onChange?: (values: string[]) => void
+  onClickCheckbox?: (id: string) => void
   defaultValue?: string[]
+  selected?: Set<string>
+  className?: string
+  name?: string
 }
 
 export const CheckboxFiltersGroup: React.FC<Props> = ({
@@ -26,9 +28,10 @@ export const CheckboxFiltersGroup: React.FC<Props> = ({
   limit = 5,
   loading,
   searchInputPlaceholder = 'Поиск...',
+  onClickCheckbox,
+  selected,
   className,
-  onChange,
-  defaultValue,
+  name,
 }) => {
   const [showAll, setShowAll] = React.useState(false)
   const [searchValue, setSearchValue] = React.useState('')
@@ -37,19 +40,21 @@ export const CheckboxFiltersGroup: React.FC<Props> = ({
     setSearchValue(e.target.value)
   }
 
-  // if (loading) {
-  //   return (
-  //     <div className={className}>
-  //       <p className="font-bold mb-3">{title}</p>
+  if (loading) {
+    return (
+      <div className={className}>
+        <p className='font-bold mb-3'>{title}</p>
 
-  //       {...Array(limit)
-  //         .fill(0)
-  //         .map((_, index) => <Skeleton key={index} className="h-6 mb-4 rounded-[8px]" />)}
+        {...Array(limit)
+          .fill(0)
+          .map((_, index) => (
+            <Skeleton key={index} className='h-6 mb-4 rounded-[8px]' />
+          ))}
 
-  //       <Skeleton className="w-28 h-6 mb-4 rounded-[8px]" />
-  //     </div>
-  //   );
-  // }
+        <Skeleton className='w-28 h-6 mb-4 rounded-[8px]' />
+      </div>
+    )
+  }
 
   const list = showAll
     ? items.filter((item) =>
@@ -78,8 +83,8 @@ export const CheckboxFiltersGroup: React.FC<Props> = ({
             text={item.text}
             value={item.value}
             endAdornment={item.endAdornment}
-            // checked={selected?.has(item.value)}
-            // onCheckedChange={() => onClickCheckbox?.(item.value)}
+            checked={selected?.has(item.value)}
+            onCheckedChange={() => onClickCheckbox?.(item.value)}
             name={item.name}
           />
         ))}
