@@ -31,4 +31,4 @@ export { ProductForm } from './product-form';
 // export * from './email-temapltes';
 // export * from './checkout';
 // export * from './form';
-// export * from './modals';
+export * from './modals';
