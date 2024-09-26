@@ -46,7 +46,7 @@ export const ChoosePizzaForm: React.FC<Props> = ({
     addIngredient,
   } = usePizzaOptions(items);
 
-  const { totalPrice, textDetaills } = getPizzaDetails(
+  const { totalPrice, textDetails } = getPizzaDetails(
     type,
     size,
     items,
@@ -67,7 +67,7 @@ export const ChoosePizzaForm: React.FC<Props> = ({
       <div className="w-[490px] bg-[#f7f6f5] p-7">
         <Title text={name} size="md" className="font-extrabold mb-1" />
 
-        <p className="text-gray-400">{textDetaills}</p>
+        <p className="text-gray-400">{textDetails}</p>
 
         <div className="flex flex-col gap-4 mt-5">
           <GroupVariants

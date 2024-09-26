@@ -60,7 +60,7 @@ async function up() {
     data: {
       name: 'Пепперони фреш',
       imageUrl:
-        '/images/35.webp',
+        '/assets/images/products/35.webp',
       categoryId: 1,
       ingredients: {
         connect: _ingredients.slice(0, 5),
@@ -72,7 +72,7 @@ async function up() {
     data: {
       name: 'Сырная',
       imageUrl:
-      '/images/36.webp',
+      '/assets/images/products/36.webp',
       categoryId: 1,
       ingredients: {
         connect: _ingredients.slice(5, 10),
@@ -84,7 +84,7 @@ async function up() {
     data: {
       name: 'Чоризо фреш',
       imageUrl:
-      '/images/37.webp',
+      '/assets/images/products/37.webp',
       categoryId: 1,
       ingredients: {
         connect: _ingredients.slice(10, 40),
@@ -163,27 +163,27 @@ async function up() {
   //   data: [
   //     {
   //       previewImageUrl:
-  //         '/images/38.webp',
+  //         '/assets/images/products/38.webp',
   //     },
   //     {
   //       previewImageUrl:
-  //        '/images/39.webp',
+  //        '/assets/images/products/39.webp',
   //     },
   //     {
   //       previewImageUrl:
-  //         '/images/40.webp',
+  //         '/assets/images/products/40.webp',
   //     },
   //     {
   //       previewImageUrl:
-  //         '/images/41.webp',
+  //         '/assets/images/products/41.webp',
   //     },
   //     {
   //       previewImageUrl:
-  //        '/images/42.webp',
+  //        '/assets/images/products/42.webp',
   //     },
   //     {
   //       previewImageUrl:
-  //        '/images/43.webp',
+  //        '/assets/images/products/43.webp',
   //     },
   //   ],
   // });
@@ -193,27 +193,27 @@ async function up() {
   //     {
   //       storyId: 1,
   //       sourceUrl:
-  //         '/images/44.webp',
+  //         '/assets/images/products/44.webp',
   //     },
   //     {
   //       storyId: 1,
   //       sourceUrl:
-  //        '/images/45.webp',
+  //        '/assets/images/products/45.webp',
   //     },
   //     {
   //       storyId: 1,
   //       sourceUrl:
-  //        '/images/46.webp',
+  //        '/assets/images/products/46.webp',
   //     },
   //     {
   //       storyId: 1,
   //       sourceUrl:
-  //         '/images/47.webp',
+  //         '/assets/images/products/47.webp',
   //     },
   //     {
   //       storyId: 1,
   //       sourceUrl:
-  //        '/images/48.webp',
+  //        '/assets/images/products/48.webp',
   //     },
   //   ],
   // });

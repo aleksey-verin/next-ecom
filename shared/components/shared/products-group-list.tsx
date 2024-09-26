@@ -43,7 +43,7 @@ export const ProductsGroupList: React.FC<Props> = ({
      >
       <Title text={title} size="lg" className="font-extrabold mb-5" />
 
-      <div className={cn('flex flex-wrap gap-[50px]', listClassName)}>
+      <div className={cn('grid grid-cols-1 gap-[50px] lg:grid-cols-2 xl:grid-cols-3', listClassName)}>
         {items.map((product, i) => (
           <ProductCard
             key={product.id}
@@ -52,7 +52,6 @@ export const ProductsGroupList: React.FC<Props> = ({
             imageUrl={product.imageUrl}
             price={product.items[0].price}
             ingredients={product.ingredients}
-            className='flex-[1_0_280px]'
           />
         ))}
       </div>
