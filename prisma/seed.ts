@@ -159,64 +159,64 @@ async function up() {
     },
   });
 
-  // await prisma.story.createMany({
-  //   data: [
-  //     {
-  //       previewImageUrl:
-  //         '/assets/images/products/38.webp',
-  //     },
-  //     {
-  //       previewImageUrl:
-  //        '/assets/images/products/39.webp',
-  //     },
-  //     {
-  //       previewImageUrl:
-  //         '/assets/images/products/40.webp',
-  //     },
-  //     {
-  //       previewImageUrl:
-  //         '/assets/images/products/41.webp',
-  //     },
-  //     {
-  //       previewImageUrl:
-  //        '/assets/images/products/42.webp',
-  //     },
-  //     {
-  //       previewImageUrl:
-  //        '/assets/images/products/43.webp',
-  //     },
-  //   ],
-  // });
+  await prisma.story.createMany({
+    data: [
+      {
+        previewImageUrl:
+          '/assets/images/products/38.webp',
+      },
+      {
+        previewImageUrl:
+         '/assets/images/products/39.webp',
+      },
+      {
+        previewImageUrl:
+          '/assets/images/products/40.webp',
+      },
+      {
+        previewImageUrl:
+          '/assets/images/products/41.webp',
+      },
+      {
+        previewImageUrl:
+         '/assets/images/products/42.webp',
+      },
+      {
+        previewImageUrl:
+         '/assets/images/products/43.webp',
+      },
+    ],
+  });
 
-  // await prisma.storyItem.createMany({
-  //   data: [
-  //     {
-  //       storyId: 1,
-  //       sourceUrl:
-  //         '/assets/images/products/44.webp',
-  //     },
-  //     {
-  //       storyId: 1,
-  //       sourceUrl:
-  //        '/assets/images/products/45.webp',
-  //     },
-  //     {
-  //       storyId: 1,
-  //       sourceUrl:
-  //        '/assets/images/products/46.webp',
-  //     },
-  //     {
-  //       storyId: 1,
-  //       sourceUrl:
-  //         '/assets/images/products/47.webp',
-  //     },
-  //     {
-  //       storyId: 1,
-  //       sourceUrl:
-  //        '/assets/images/products/48.webp',
-  //     },
-  //   ],
-  // });
+  await prisma.storyItem.createMany({
+    data: [
+      {
+        storyId: 1,
+        sourceUrl:
+          '/assets/images/products/44.webp',
+      },
+      {
+        storyId: 1,
+        sourceUrl:
+         '/assets/images/products/45.webp',
+      },
+      {
+        storyId: 1,
+        sourceUrl:
+         '/assets/images/products/46.webp',
+      },
+      {
+        storyId: 1,
+        sourceUrl:
+          '/assets/images/products/47.webp',
+      },
+      {
+        storyId: 1,
+        sourceUrl:
+         '/assets/images/products/48.webp',
+      },
+    ],
+  });
 }
 
 async function down() {

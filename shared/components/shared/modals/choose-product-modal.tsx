@@ -1,14 +1,13 @@
 'use client';
 
-import { Dialog, DialogContent } from '@/shared/components/ui/';
+import { Dialog, DialogContent, DialogDescription, DialogTitle } from '@/shared/components/ui/dialog';
 import { cn } from '@/shared/lib/utils';
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import { ProductWithRelations } from '@/@types/prisma';
-// import { useCartStore } from '@/shared/store';
-// import toast from 'react-hot-toast';
+import { useCartStore } from '@/shared/store';
+import toast from 'react-hot-toast';
 import { ProductForm } from '../product-form';
-import { DialogDescription, DialogTitle } from '../../ui/dialog';
 
 interface Props {
   product: ProductWithRelations;
@@ -25,8 +24,8 @@ export const ChooseProductModal: React.FC<Props> = ({ product, className }) => {
           'p-0 w-[1060px] max-w-[1060px] min-h-[500px] bg-white overflow-hidden',
           className,
         )}>
-        <DialogTitle className='hidden'>Title</DialogTitle>
-        <DialogDescription className='hidden'>Description</DialogDescription>
+        <DialogTitle className="hidden">Выберите продукт</DialogTitle>
+        <DialogDescription className="hidden">Выберите продукт для добавления в корзину</DialogDescription>
         <ProductForm product={product} onSubmit={() => router.back()} />
       </DialogContent>
     </Dialog>
